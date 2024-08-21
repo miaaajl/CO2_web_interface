@@ -1,0 +1,16 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Calculation Results</h1>
+    <img src="{{ url_for('static', filename='images/results.png') }}" alt="Results Plot">
+    <p><a href="{{ url_for('download_plot') }}">Download the plot</a></p>
+    <p><a href="{{ url_for('index') }}">Go back</a></p>
+</body>
+</html>

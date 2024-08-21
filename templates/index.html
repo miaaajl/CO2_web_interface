@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logistic Growth Model Calculation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Logistic Growth Model Calculation</h1>
+    <form method="POST" action="{{ url_for('calculate') }}">
+        <label for="start_year">Start Year:</label>
+        <input type="number" id="start_year" name="start_year" value="2030" required><br>
+        
+        <label for="start_q">Start Q:</label>
+        <input type="number" id="start_q" name="start_q" step="any" value="0.95755" required><br>
+        
+        <label for="start_qt">Start Qt:</label>
+        <input type="number" id="start_qt" name="start_qt" step="any" value="0.06984" required><br>
+        
+        <label for="target_year">Target Year:</label>
+        <input type="number" id="target_year" name="target_year" value="2050" required><br>
+        
+        <label for="target_s">Target S:</label>
+        <input type="number" id="target_s" name="target_s" step="any" value="1.04" required><br>
+        
+        <label for="Pr_range">Pr Range (e.g., 2050,2350,2000):</label>
+        <input type="text" id="Pr_range" name="Pr_range" value="2050,2350,2000" required><br>
+        
+        <label for="Qr_range">Qr Range (e.g., 1,10000,4000):</label>
+        <input type="text" id="Qr_range" name="Qr_range" value="1,10000,4000" required><br>
+        
+        <label for="Rr_list">Rr List (comma separated):</label>
+        <input type="text" id="Rr_list" name="Rr_list" value="0.11432,0.11456,0.1284,0.188464061" required><br>
+        
+        <label for="w">Growth Rate:</label>
+        <input type="number" id="w" name="w" step="any" value="0.09" required><br>
+        
+        <label for="year_rate_change">Year Rate Change:</label>
+        <input type="number" id="year_rate_change" name="year_rate_change" value="2030" required><br>
+        
+        <input type="submit" value="Calculate">
+    </form>
+</body>
+</html>
